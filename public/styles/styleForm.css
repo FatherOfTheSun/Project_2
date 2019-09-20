@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Comfortaa', cursive;
+}
+
+.backImg{
+    top: 16%;
+    width: 100%;
+    position: fixed;
+    opacity: 0.3;
+}
+
+/*logo row*/
+h1{
+    margin-top: 5%;
+    font-size: 3.25rem;
+    
+}
+
+
+/*form row*/
+form{
+    margin-top: 30%;
+    padding: 10px;
+}
+
+button.submitButton{
+    background-color: #5C5656;
+    border-color: #5C5656;
+}
+
+/*nav row*/
+nav{
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    background-color: #5C5656;
+    z-index: 100;
+}
+
+nav a{
+    margin-left: 30%;
+    padding: 20px;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: whitesmoke;
+}
+  
+h2{
+    margin: 0;
+    font-size: 1.25rem;
+    left: 5;
+}
+
