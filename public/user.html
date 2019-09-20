@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>R.R.A.N</title>
+    <meta name="viewport" content="device-width,initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/0109a9a2a0.js"></script>
+
+    <link rel="shortcut icon" type="image/png" href="images/dolly.svg.png" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300|Open+Sans&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+        integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+        integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"
+        integrity="sha256-+9YNuItWuR4sbqeaNiJOxG0BvptYz4fbUXbIZoH5Jwo=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles/styleUser.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-12 mb12">
+                <div class="backImgWrap">
+                    <img class="backImg" src="images/inventoryPic.jpg" alt="inventory background">
+
+                    <!--Logo-->
+                    <div class="row">
+                        <div class="col-md-12 mb-12">
+                            <h1>R.R.A.N</h1>
+
+                        </div>
+                    </div>
+
+                    <!--Slogan-->
+                    <div class="row">
+                        <div class="col-md-3 mb-12">
+                            <h2>YOUR ON-THE-GO <br>
+                                INVENTORY APP.</h2>
+                        </div>
+                    </div>
+
+                    <!--Welcome-->
+                    <div class="row">
+                        <div class="col-md-12 mb-12">
+                            <h1 class="sign-in">WELCOME</h1>
+                        </div>
+                    </div>
+
+                    <!--Table-->
+                    <div class="row">
+                        <div class="col-md-12 mb-12">
+                            <ul id="inventoryInfo" class="list-group">
+                                <li class="list-group-item active" id="listHeader">INVENTORY</li>
+                                <table class="resultTable">
+                                    <tr>
+                                        <th>Item Name</th>
+                                        <th>Count</th>
+                                        <th>Category</th>
+
+                                    </tr>
+
+                                </table>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--Form-->
+                    <div class="row">
+                        <div class="col-md-12 mb-12">
+                            <form id="itemsForm">
+                                <div class=" form-group">
+
+                                    <input type="text" class="form-control" id="inputItem" placeholder="Item Name">
+
+                                    <div class="countWrap">
+                                        <div class="input-group-append">
+                                            <input type="text" class="form-control" id="inputCount" placeholder="Count">
+
+                                            <select class="form-control" id="measureSelector">
+                                                <option value="">Choose a Measurment</option>
+                                                <option value="oz">oz.</option>
+                                                <option value="lbs">lbs.</option>
+                                                <option value="cases">Cases</option>
+                                                <option value="sleeves">Sleeves</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <select class="form-control" id="categorySelector">
+                                    <option value="">Choose a Category</option>
+                                    <option value="chemical">Chemical</option>
+                                    <option value="dryGoods">Dry Goods</option>
+                                    <option value="beverages">Beverages</option>
+                                    <option value="catering">Catering</option>
+                                    <option value="walk-in">Walk-in</option>
+                                </select>
+
+                                <button type="submit" class="btn btn-primary submitButton">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+                    <!--Nav-->
+                    <nav>
+                        <ul>
+                            <li><a href="#itemsForm"><i class="fas fa-pencil-alt"></i> LOG ITEM</a></li>
+                            <li class="inventoryTab"><a href="#inventoryInfo"><i class="far fa-file-alt"></i>
+                                    INVENTORY</a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="assets/js/animation.js"></script>
+</body>
+
+</html>
