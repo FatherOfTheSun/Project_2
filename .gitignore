@@ -1,9 +1,5 @@
-<<<<<<< Updated upstream
 .DS_Store
 node_modules
 npm-debug.log
 .env
 config/config.json
-=======
-node_modules
->>>>>>> Stashed changes
