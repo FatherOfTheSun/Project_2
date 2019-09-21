@@ -1,6 +1,4 @@
-
 var Sequelize = require("sequelize");
-
 
 var sequelize = new Sequelize("inventory_db", "root", "12345", {
   host: "localhost",

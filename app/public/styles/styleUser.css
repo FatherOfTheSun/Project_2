@@ -1,0 +1,128 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html{
+  scroll-behavior: smooth;
+  }
+  
+  body{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Comfortaa', cursive;
+  }
+  
+  .backImg{
+    top: 16%;
+    width: 100%;
+    position: fixed;
+    opacity: 0.3;
+  }
+  /*logo row*/
+  h1{
+  margin-top: 5%;
+  font-size: 3.25rem;
+  
+  }
+  
+  /*slogan row*/
+  h2{
+    margin-top: 50%;
+    font-size: 1.5rem;
+  
+  }
+  
+  /*signin row*/
+  h1.sign-in{
+    margin-top: 48%;
+    margin-left: 9%;
+    margin-bottom: 30%
+  }
+
+  /*inventory row*/
+  #inventoryInfo{
+    margin-top: 0%;
+  }
+  
+  #listHeader{
+    background-color:#807C7C;
+    border: #5C5656;
+  }
+  
+  th{
+    background-color: #5C5656;
+    align-content: center;
+    color: aliceblue;
+    padding: 10px;
+  }
+  
+  /*items input row*/
+  #itemsForm{
+    margin-bottom: 40%;
+    margin-top: 75%;
+    font-size: 1.5rem;
+  }
+  
+  .countWrap{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0%;
+  }
+  
+  #inputCount{
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    width: 60%;
+  }
+  
+  #buttonCount{
+    background-color: #5C5656;
+    border-color: #5C5656;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+  }
+  
+  .submitButton{
+    background-color: #5C5656;
+    border-color: #5C5656;
+  }
+  
+  .form-control{
+    margin-bottom: 6%;
+  }
+  
+  /*nav row*/
+  nav{
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    background-color: #5C5656;
+    z-index: 100;
+  }
+  
+  nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+    
+  nav li{
+    float: left;
+  }
+    
+  .inventoryTab{
+    float: right;
+  }
+  
+  nav a{
+    padding: 20px;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  
