@@ -24,7 +24,6 @@
   h1{
   margin-top: 5%;
   font-size: 3.25rem;
-  
   }
   
   /*slogan row*/
@@ -39,6 +38,12 @@
     margin-top: 48%;
     margin-left: 9%;
     margin-bottom: 30%
+  }
+
+  .sign-in{
+    animation-duration: 2.5s;
+    animation-delay: .5s;
+    animation-iteration-count: initial;
   }
 
   /*inventory row*/
@@ -56,6 +61,12 @@
     align-content: center;
     color: aliceblue;
     padding: 10px;
+  }
+
+  td{
+    background-color: rgb(202, 202, 202);
+    overflow-x: auto;
+    padding:10px; 
   }
   
   /*items input row*/
@@ -114,6 +125,10 @@
     float: left;
   }
     
+  .logTab{
+    float: left;
+  }
+
   .inventoryTab{
     float: right;
   }
@@ -126,3 +141,51 @@
     color: whitesmoke;
   }
   
+  /*media queries*/
+
+@media(min-width:768px){
+  
+  h1{
+    margin-top: 5%;
+    font-size: 9rem;
+  }
+  
+  h1.sign-in{
+    font-size: 6rem;
+    margin-top: 25%;
+    margin-left: 21%;
+    margin-bottom: 30%
+  }
+
+  h2{
+    margin-left: 11%;
+    font-size: 3rem;
+  }
+
+  .list-group{
+    font-size: 2rem;
+  }
+
+  .form-group{
+      font-size: 3rem;
+  }
+
+  .form-control{
+      font-size: 2rem;
+  }
+
+  .logTab{
+    font-size: 2.25rem;
+  }
+
+  .inventoryTab{
+      margin-left: 10%;
+      font-size: 2.25rem;
+  }
+
+  .submitButton{
+    font-size: 1.75rem;
+  }
+  
+
+};
