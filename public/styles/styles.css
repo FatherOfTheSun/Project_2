@@ -24,72 +24,43 @@ body{
 h1{
 margin-top: 5%;
 font-size: 3.25rem;
+}
 
+.logo{
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-iteration-count: initial;
 }
 
 /*slogan row*/
 h2{
   margin-top: 50%;
   font-size: 1.5rem;
+}
+
+.slogan{
+  animation:typewriter 4s steps(40) 1.75s 1 normal both,
+  organizer 500ms steps(40)  normal;
 
 }
 
+@keyframes typewriter {
+  from{
+    width: 0%;
+  }
+  to{width: 15em;
+
+  }
+}
+
+    
 /*signin row*/
 h2.sign-in{
   margin-top: 50%;
   margin-left: 35%;
-}
-
-/*inventory row*/
-#inventoryInfo{
-  margin-top: 50%;
-}
-
-#listHeader{
-  background-color:#807C7C;
-  border: #5C5656;
-}
-
-th{
-  background-color: #5C5656;
-  align-content: center;
-  color: aliceblue;
-  padding: 10px;
-}
-
-/*items input row*/
-#itemsForm{
-  margin-bottom: 30%;
-  margin-top: 75%;
-  font-size: 1.5rem;
-}
-
-.countWrap{
-padding-top: 10px;
-padding-bottom: 10px;
-margin: 0%;
-}
-
-#inputCount{
-  border-top-right-radius: 0%;
-  border-bottom-right-radius: 0%;
-  width: 700%;
-}
-
-#buttonCount{
-  background-color: #5C5656;
-  border-color: #5C5656;
-  border-top-left-radius: 0%;
-  border-bottom-left-radius: 0%;
-}
-
-.submitButton{
-  background-color: #5C5656;
-  border-color: #5C5656;
-}
-
-.form-control{
-  margin-bottom: 6%;
+  animation-duration: 1s;
+  animation-delay: 5s;
+  animation-iteration-count: initial;
 }
 
 /*nav row*/
@@ -130,3 +101,34 @@ nav h2{
   font-size: 1.25rem;
   left: 5;
 }
+
+/*media queries*/
+
+@media(min-width:768px){
+
+  h2{
+    margin-left: 11%;
+    margin-top: 171%;
+    font-size: 3rem;
+  }
+
+  h2.sign-in{
+    font-size: 3rem;
+    margin-top: 35%;
+    margin-left: 40%;
+    
+  }
+
+  h1{
+    margin-top: 5%;
+    font-size: 9rem;
+    }
+
+    .inventoryTab{
+      margin-left: 37%;
+      font-size: 2.25rem;
+      }
+
+  
+
+};
