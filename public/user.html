@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>R.R.A.N</title>
-    <meta name="viewport" content="device-width,initial-scale=1.0">
+    <meta name="viewport" content="device-width, initial-scale=1.0">
 
     <script src="https://kit.fontawesome.com/0109a9a2a0.js"></script>
 
@@ -115,7 +115,8 @@
                                     <option value="walk-in">Walk-in</option>
                                 </select>
 
-                                <button type="submit" class="btn btn-primary submitButton">Submit</button>
+                                <button id="form-submit" type="submit"
+                                    class="btn btn-primary submitButton">Submit</button>
                             </form>
                         </div>
                     </div>
@@ -141,3 +142,44 @@
 </body>
 
 </html>
+<script type="text/javascript">
+    $("#form-submit").on("click", function (event) {
+        event.preventDefault();
+
+        // Here we grab the form elements
+        var newinventory = {
+            item: $("#inputItem").val().trim(),
+            amount: $("#inputCount").val().trim(),
+            measure: $("#measureSelector").val().trim(),
+            category: $("#categorySelector").val().trim()
+        };
+
+        console.log(newinventory);
+
+        // This line is the magic. It"s very similar to the standard ajax function we used.
+        // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+        // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+        // depending on if a tables is available or not.
+
+        $.post("/api/inventory", newinventory,
+            function (data) {
+                // If a table is available... tell user they are booked.
+                if (data) {
+                    alert("Item added!");
+                }
+
+                // If a table is available... tell user they on the waiting list.
+                else {
+                    alert("Sorry try again");
+                }
+
+                // Clear the form when submitting///attach ricardo varibles
+                $("#inputItem").val("");
+                $("#inputCount").val("");
+                $("#measureSelector").val("");
+                $("#categorySelector").val("");
+
+            });
+    });
+
+</script>
