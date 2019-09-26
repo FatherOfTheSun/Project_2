@@ -64,7 +64,6 @@
                         </div>
                     </div>
 
-                    <!--Table-->
                     <div class="row">
                         <div class="col-md-12 mb-12">
                             <ul id="inventoryInfo" class="list-group">
@@ -76,68 +75,116 @@
                                         <th>Category</th>
 
                                     </tr>
-
-
-                                </table>
-                            </ul>
+                                    <span class="col-md-12 item-container">
                         </div>
+
+
+                        </table>
+                        </ul>
                     </div>
+                </div>
 
-                    <!--Form-->
-                    <div class="row">
-                        <div class="col-md-12 mb-12">
-                            <form id="itemsForm">
-                                <div class=" form-group">
+                <!---ITEM CONTAINER-->
+                <div id="item-section"></div>
+                <!---ITEM CONTAINER-->
+                <!--Form-->
+                <div class="row">
+                    <div class="col-md-12 mb-12">
+                        <form id="itemsForm">
+                            <div class=" form-group">
 
-                                    <input type="text" class="form-control" id="inputItem" placeholder="Item Name">
+                                <input type="text" class="form-control" id="inputItem" placeholder="Item Name">
 
-                                    <div class="countWrap">
-                                        <div class="input-group-append">
-                                            <input type="text" class="form-control" id="inputCount" placeholder="Count">
+                                <div class="countWrap">
+                                    <div class="input-group-append">
+                                        <input type="text" class="form-control" id="inputCount" placeholder="Count">
 
-                                            <select class="form-control" id="measureSelector">
-                                                <option value="">Choose a Measurment</option>
-                                                <option value="oz">oz.</option>
-                                                <option value="lbs">lbs.</option>
-                                                <option value="cases">Cases</option>
-                                                <option value="sleeves">Sleeves</option>
-                                            </select>
-                                        </div>
+                                        <select class="form-control" id="measureSelector">
+                                            <option value="">Choose a Measurment</option>
+                                            <option value="oz">oz.</option>
+                                            <option value="lbs">lbs.</option>
+                                            <option value="cases">Cases</option>
+                                            <option value="sleeves">Sleeves</option>
+                                        </select>
                                     </div>
                                 </div>
+                            </div>
 
-                                <select class="form-control" id="categorySelector">
-                                    <option value="">Choose a Category</option>
-                                    <option value="chemical">Chemical</option>
-                                    <option value="dryGoods">Dry Goods</option>
-                                    <option value="beverages">Beverages</option>
-                                    <option value="catering">Catering</option>
-                                    <option value="walk-in">Walk-in</option>
-                                </select>
+                            <select class="form-control" id="categorySelector">
+                                <option value="">Choose a Category</option>
+                                <option value="chemical">Chemical</option>
+                                <option value="dryGoods">Dry Goods</option>
+                                <option value="beverages">Beverages</option>
+                                <option value="catering">Catering</option>
+                                <option value="walk-in">Walk-in</option>
+                            </select>
 
-                                <button type="submit" class="btn btn-primary submitButton">Submit</button>
-                            </form>
-                        </div>
+                            <button id="form-submit" type="submit" class="btn btn-primary submitButton">Submit</button>
+                        </form>
                     </div>
-
-
-
-
-                    <!--Nav-->
-                    <nav>
-                        <ul>
-                            <li class="logTab"><a href="#itemsForm"><i class="fas fa-pencil-alt"></i> LOG ITEM</a>
-                            </li>
-                            <li class="inventoryTab"><a href="#inventoryInfo"><i class="far fa-file-alt"></i>
-                                    INVENTORY</a>
-                            </li>
-
-                        </ul>
-                    </nav>
                 </div>
+
+
+
+
+                <!--Nav-->
+                <nav>
+                    <ul>
+                        <li class="logTab"><a href="#itemsForm"><i class="fas fa-pencil-alt"></i> LOG ITEM</a>
+                        </li>
+                        <li class="inventoryTab"><a href="#inventoryInfo"><i class="far fa-file-alt"></i>
+                                INVENTORY</a>
+                        </li>
+
+                    </ul>
+                </nav>
             </div>
         </div>
+    </div>
     </div>
 </body>
 
 </html>
+<script src="js/addItem.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $("#form-submit").on("click", function (event) {
+        event.preventDefault();
+
+        // Here we grab the form elements
+        var newinventory = {
+            item: $("#inputItem").val().trim(),
+            amount: $("#inputCount").val().trim(),
+            measure: $("#measureSelector").val().trim(),
+            category: $("#categorySelector").val().trim()
+        };
+
+        console.log(newinventory);
+
+        // This line is the magic. It"s very similar to the standard ajax function we used.
+        // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+        // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+        // depending on if a tables is available or not.
+
+        $.post("/api/inventory", newinventory,
+            function (data) {
+                // If a table is available... tell user they are booked.
+                if (data) {
+                    alert("Item added!");
+                }
+
+                // If a table is available... tell user they on the waiting list.
+                else {
+                    alert("Sorry try again");
+                }
+
+                // Clear the form when submitting///attach ricardo varibles
+                $("#inputItem").val("");
+                $("#inputCount").val("");
+                $("#measureSelector").val("");
+                $("#categorySelector").val("");
+
+            });
+    });
+
+</script>
