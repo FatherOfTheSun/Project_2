@@ -1,5 +1,5 @@
-$(document).ready(function () {
-    //After the DOM is ready everything below here will run// 
+/*$(document).ready(function () {
+    //After the DOM is ready everything below here will run//
 
     var userInput;
     var userPassword;
@@ -38,4 +38,4 @@ var credentials = {
     password: userPassword
 }
 
-module.exports = credentials
+module.exports = credentials*/
