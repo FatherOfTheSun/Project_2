@@ -1,5 +1,5 @@
 /*$(document).ready(function () {
-    //After the DOM is ready everything below here will run// 
+    //After the DOM is ready everything below here will run//
 
     var userInput;
     var userPassword;
