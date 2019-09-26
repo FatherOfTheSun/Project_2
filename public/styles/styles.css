@@ -33,10 +33,7 @@ font-size: 3.25rem;
 }
 
 /*slogan row*/
-h2{
-  margin-top: 50%;
-  font-size: 1.5rem;
-}
+
 
 .slogan{
   animation:typewriter 4s steps(40) 1.75s 1 normal both,
@@ -53,16 +50,29 @@ h2{
   }
 }
 
-    
+h2{
+  font-size: 1.5rem;
+  margin-top: 50%;
+}  
+
 /*signin row*/
 h2.sign-in{
-  margin-top: 50%;
-  margin-left: 35%;
+  margin-top: 0%;
   animation-duration: 1s;
   animation-delay: 5s;
   animation-iteration-count: initial;
 }
 
+h2.sign-up{
+  margin-top: 0%;
+  animation-duration: 1s;
+  animation-delay: 5s;
+  animation-iteration-count: initial;
+}
+
+.logs{
+  margin-top: 75%;
+}
 /*nav row*/
 nav{
   width: 100%;
@@ -106,29 +116,33 @@ nav h2{
 
 @media(min-width:768px){
 
-  h2{
-    margin-left: 11%;
-    margin-top: 171%;
+  .slogan{
+    margin-left: 2%;
+    margin-top: 15.5%;
     font-size: 3rem;
   }
 
   h2.sign-in{
     font-size: 3rem;
-    margin-top: 35%;
-    margin-left: 40%;
-    
+  }
+
+  h2.sign-up{
+    font-size: 3rem;
   }
 
   h1{
     margin-top: 5%;
     font-size: 9rem;
-    }
+  }
 
-    .inventoryTab{
-      margin-left: 37%;
-      font-size: 2.25rem;
-      }
+  .inventoryTab{
+    margin-left: 37%;
+    font-size: 2.25rem;
+  }
 
-  
+  .logs{
+    margin-top: 62%;
+  }
 
 };
+
