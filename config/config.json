@@ -1,21 +1,37 @@
 {
-  "development": {
-    "username": "root",
-    "password": "Amartin4",
-    "database": "inventory_db",
-    "host": "localhost",
-    "dialect": "mysql"
+  "name": "node-handlebars-boilerplate",
+  "version": "1.0.0",
+  "description": "Project 2 Starter",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:dev": "nodemon server.js",
+    "lint": "eslint --quiet .",
+    "fix": "eslint --fix .",
+    "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
   },
-  "test": {
-    "username": "root",
-    "password": "PASSWORD",
-    "database": "testdb",
-    "host": "localhost",
-    "dialect": "mysql",
-    "logging": false
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.0",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.16.1",
+    "jquery": "^3.4.1",
+    "mysql2": "^1.6.5",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.8.6"
   },
-  "production": {
-    "use_env_variable": "JAWSDB_URL",
-    "dialect": "mysql"
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.2",
+    "prettier": "^1.17.1"
   }
 }

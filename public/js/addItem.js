@@ -14,23 +14,23 @@ $.get("/api/inventory", function (data) {
         $("#item-section").append(wellSection);
 
         // Now  we add our item data to the well we just placed on the page
-
-        $("#item-well-" + i).append(
+        var newrow = $("#item-well-" + i).append(
             // YOU CAN RENAME THE <th> OR CREATE ID'S AND CLASS JUST ONLY TOUCH THE ONES IN "QUOTES" //
 
-            "<th>" +
+            " <td>" +
             data[i].item +
-            "</th>" +
-            "<th> " +
+            "</td>" +
+            "<td> " +
             data[i].amount +
-            "</th>" +
-            "<th>" +
+            "</td>" +
+            "<td>" +
             data[i].measure +
             // eslint-disable-next-line prettier/prettier
-            "</th>" +
-            "<th> " +
+            "</td>" +
+            "<td>" +
             data[i].category +
-            "</th>"
-        );
-    }
+            "</td>"
+        )
+    };
+    $(".resultTable").append(newrow);
 });
