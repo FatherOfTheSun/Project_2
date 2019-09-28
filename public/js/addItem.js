@@ -18,6 +18,7 @@ $.get("/api/inventory", function (data) {
         $("#item-well-" + i).append(
             // YOU CAN RENAME THE <th> OR CREATE ID'S AND CLASS JUST ONLY TOUCH THE ONES IN "QUOTES" //
 
+
             "<th width ='25%' >" +
             data[i].item +
             "</th>" +
@@ -29,6 +30,7 @@ $.get("/api/inventory", function (data) {
             // eslint-disable-next-line prettier/prettier
             "</th>" +
             "<th width ='25%' > " +
+
             data[i].category +
             "</th>"
         );
