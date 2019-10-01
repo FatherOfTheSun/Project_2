@@ -29,6 +29,10 @@ h1{
 
 
 /*form row*/
+#form-sign-up{
+position: fixed;
+}
+
 form{
     margin-top: 30%;
     padding: 10px;
