@@ -27,9 +27,8 @@ module.exports = function(app) {
   app.get("/form", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/form.html"));
   });
-  
+
   app.get("/user", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/user.html"));
   });
-
 };
